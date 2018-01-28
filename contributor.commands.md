@@ -6,12 +6,12 @@
 
 ## steps to modify the website content,style and make it live.
 
-1.make your local changes 
-2.git add .
-3.git commit --message "<your message here>"
-4.git pull --rebase
-5.git push (need to enter github password)
+1.make your local changes   
+2.git add .  
+3.git commit --message "<your message here>"  
+4.git pull --rebase  
+5.git push (need to enter github password)  
 
 ## useful commands
-'git status' can be run any time to know the status of the repo
-'git log' it shows previous commits  
+'git status' can be run any time to know the status of the repo  
+'git log' it shows previous commits    
