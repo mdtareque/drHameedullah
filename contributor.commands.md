@@ -1,17 +1,18 @@
-## one time setup : 
-- get added as collaborator of the original repo
-- git clone original repo
-- git config --global user.email "<your email>"
-- git config --global user.name "<your name>"
+## One Time Aetup : 
+1. get added as collaborator of the original repo  
+2. `git clone original <repo>`  
+3. `git config --global user.email "<your email>"`  
+4. `git config --global user.name "<your name>"`  
 
-## steps to modify the website content,style and make it live.
+## Steps to make changes:
+To modify the website content, style and to make it live, follow below procedure
 
-1.make your local changes   
-2.git add .  
-3.git commit --message "<your message here>"  
-4.git pull --rebase  
-5.git push (need to enter github password)  
+1. Make your local changes   
+2. Stage your changes: `git add .`  
+3. Commit your changes: `git commit --message "<your message here>"`  
+4. Get others changes: `git pull --rebase`  
+5. Publish: `git push` (need to enter github password)    
 
-## useful commands
-'git status' can be run any time to know the status of the repo  
-'git log' it shows previous commits    
+## Useful Commands
+- `git status` can be run any time to know the status of the repo   
+- `git log` it shows previous commits    
