@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Dr. Mohammed Hameedullah - Info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-<h1>Dr. Mohammed Hameedullah - Info</h1>
-<p>
-A scholar of Islamic law and an academic author of more than 250 books in several languages.<br/>
-He was fluent in 22 languages. He learned Thai at age of 84.<br/>
-</p>
-<a href="https://en.wikipedia.org/wiki/Muhammad_Hamidullah">Wikipedia Page<a/>
+    <div id="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/images/logo.jpg" alt="" class="img-responsive">
+        </div>
+        <div class="toggle-btn">
+            <span class="top"></span>
+
+        </div>
+        <div class="list-item">
+            <ul>
+                <li class="submenu">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Biographical Information</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li class="item"><a href="#">Timeline </a></li>
+                        <li class="item"><a href="#">Education </a></li>
+                        <li><a href="#">Career </a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a href="#obituarySubbmenu" data-toggle="collapse" aria-expanded="false">Obituary </a>
+                    <ul class="collapse list-unstyled" id="obituarySubbmenu">
+                        <li class="item"><a href="#">Magazines </a></li>
+                        <li class="item"><a href="#">News channels </a></li>
+                    </ul>
+                </li>
+                <li>contact</li>
+            </ul>
+        </div>
+
+    </div>
+    <div>
+        <div class="contents">
+
+            <h2>Collapsible Sidebar Using Bootstrap 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h3>Lorem Ipsum Dolor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        //        function toggleSidebar() {
+        //            document.getElementById("sidebar").classList.toggle('active');
+        //        }
+        $(document).ready(function() {
+            $('.toggle-btn').click(function() {
+                $('#sidebar').toggleClass('active');
+                $('.toggle-btn').toggleClass('toggle');
+            })
+
+        });
+
+    </script>
 </body>
+
 </html>
