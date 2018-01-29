@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Dr hameedullah</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,31 +13,42 @@
 <body>
     <div id="sidebar">
         <div class="sidebar-logo">
-            <img src="assets/images/profile.jpg" alt="" class="img-responsive">
+            <img src="assets/images/profile_2.jpg" alt="" class="img-responsive">
+            <h4>Dr. Muhammad Hamidullah</h4>
         </div>
         <div class="toggle-btn">
             <span class="top"></span>
 
         </div>
         <div class="list-item">
-            <ul>
-                <li class="submenu">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Biographical Information</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li class="item"><a href="#">Timeline </a></li>
-                        <li class="item"><a href="#">Education </a></li>
-                        <li><a href="#">Career </a></li>
-                    </ul>
+
+            <ul class="menu-list list ">
+                <li id="nav1" class="toggle list-toggle">
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">Biographical</a>
+                </li>
+                <!-- list-toggle -->
+                <ul class="menu-submenu list-content">
+                    <li><a class="head" href="#">Timeline</a></li>
+                    <li><a class="head" href="#">Education</a></li>
+
+                </ul>
+                <!-- menu-submenu accordon-content-->
+                <li id="nav2" class="toggle list-toggle">
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">Obituary</a>
+                </li>
+                <!-- list-toggle -->
+                <ul class="menu-submenu list-content">
+                    <li><a class="head" href="#">Magazines</a></li>
+                    <li><a class="head" href="#">News channels </a></li>
+                </ul>
+                <!-- menu-submenu accordon-content-->
+                <li id="nav3" class="without-toggle">
+                    <a class="menu-link" href="#">contact</a>
                 </li>
 
-                <li class="submenu">
-                    <a href="#obituarySubbmenu" data-toggle="collapse" aria-expanded="false">Obituary </a>
-                    <ul class="collapse list-unstyled" id="obituarySubbmenu">
-                        <li class="item"><a href="#">Magazines </a></li>
-                        <li class="item"><a href="#">News channels </a></li>
-                    </ul>
-                </li>
-                <li>contact</li>
+                <!-- menu-submenu accordon-content-->
             </ul>
         </div>
 
@@ -57,27 +68,51 @@
             <p>Professor Hamidullah's scholarship is unparalleled in the last century. He was fluent in 22 languages including Urdu, Arabic, French, English, etc. He learned Thai at the age of 84. He translated the Qur'an in French and many other languages. He also translated a number of other important Islamic books in many European languages. He gave lectures in various universities around the world, some of which have been published. His works on Islamic science, history and culture number more than 250. His books have been translated in many languages.</p>
 
             <p>Some of his most famous books include "Introduction to Islam", "Muhammad Rasulullah", "The Battlefields of Prophet Muhammad", "The Muslim Conduct of State", and "The First Written Constitution."</p>
-            
+
             <p>One of his great contributions to the hadith literature was the discovery of Sahifa Hammam bin Munabbah, the earliest hadith manuscript still extant today. Two copies of it were discovered; one in a Damascus library and the other in a library in Berlin. Dr. Hamidullah published it after carefully comparing the two manuscripts. This was an important discovery for the hadith scholars. It also proved, as has always been held, that the earliest manuscripts had been absorbed in the much bigger later compilations. Hammam bin Munabbah was a disciple of Syedna Abu Huraira, Radi-Allahu unhu. It was generally known that Sahifah Hammam bin Munabah had been completely included in the Musnad Ahmed. After the publication of the Sahifah by Dr. Hamidullah, hadith scholars searched Musnad Ahmed for the presence of the ahadith from the Sahifah. They found all 138 ahadith of the Sahifah in the Musnad. There was not the slightest discrepancy in any of them! He wrote several researched treatise on the early life of Muslims. Dr. Muhammad Hamidullah was well known for the great quality and high caliber of his research in Islamic Law and history. He was recognized as one of the most authoritative scholars in Islamic International Law and Islamic Constitutional aw. At its initial stages, he was invited by the government of Pakistan to help draft the constitution of Pakistan. This great scholar led a life of simplicity, patience and humility. He passed away in his sleep on December 17, 2002 at the age of 95 in Jacksonville, Florida.</p>
-            
+
             <p>Reference: <a href="https://www.albalagh.net/general/dr_hamidullah.shtml" target="_blank">https://www.albalagh.net/general/dr_hamidullah.shtml</a></p>
         </div>
     </div>
 
 
+
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
         //        function toggleSidebar() {
         //            document.getElementById("sidebar").classList.toggle('active');
         //        }
         $(document).ready(function() {
+            $(".menu-submenu").find("li").click(function(event) {
+                    $('li').removeClass('active');
+                    $(this).addClass('active');
+                    event.preventDefault()
+                }
+            );
             $('.toggle-btn').click(function() {
                 $('#sidebar').toggleClass('active');
                 $('.toggle-btn').toggleClass('toggle');
-            })
+            });
+            $(".menu-list").find(".list-toggle").click(function() {
+                $(this).next().toggleClass("open").slideToggle("fast");
+                $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+                $(".menu-list .list-content")
+                    .not($(this).next())
+                    .slideUp("fast")
+                    .removeClass("open");
+                $(".menu-list .list-toggle")
+                    .not(jQuery(this))
+                    .removeClass("active-tab")
+                    .find(".menu-link")
+                    .removeClass("active");
+            });
 
         });
+
     </script>
 </body>
 
